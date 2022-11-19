@@ -1,0 +1,66 @@
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-900);
+}
+
+h1, h2, h3 {
+  font-weight: var(--fw-bold);
+}
+
+p {
+  font-weight: var(--fw-semi-bold);
+}
+
+.hero,
+.call-to-action {
+  text-align: center;
+  
+  &__title {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    line-heigt: 1.4;
+  }
+}
+
+.hero {
+  
+  &__service-stats {
+    
+    h2, h3 {
+      font-size: var(--fs-900);
+    }
+    
+    h2 > span,
+    h3 > span {
+      font-size: var(--fs-400);
+      font-weight: var(--fw-regular);
+    }
+  }
+}
+
+.services {
+  text-align: center;
+  
+  h2 {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-secondary);
+  }
+}
+
+// components
+// buttons
+.pill-primary,
+.cutout-corners-primary {
+  color: var(--clr-neutral-100);
+}
+
+button,
+a[class*= "pill-primary"],
+a[class*= "pill-secondary"] {
+  text-decoration: none;
+  font-weight: var(--fw-semi-bold);
+}
+

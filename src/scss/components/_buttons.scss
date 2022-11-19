@@ -1,0 +1,33 @@
+button,
+a[class*= "pill-primary"],
+a[class*= "pill-secondary"] {
+  border: none;
+  
+  &:active {
+    transform: scale(98%);
+  }
+}
+
+.pill-primary,
+.cutout-corners-primary {
+  background-color: var(--clr-primary-400);
+  
+  &:hover {
+    background-color: var(--clr-primary-300);
+  }
+  
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.pill-primary {
+  padding: 0.75em 3em;
+  border-radius: 100vmax;
+  box-shadow: 0 0.35em 5px hsla(0, 0%, 0%, 0.1);
+}
+
+a[class*= "pill-primary"],
+a[class*= "pill-secondary"] {
+  display: inline-block;
+}

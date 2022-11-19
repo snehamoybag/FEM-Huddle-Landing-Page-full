@@ -1,0 +1,9 @@
+.header {
+  padding: 1em 1.25em;
+  margin-bottom: 5rem;
+  
+  &__logo {
+    width: 6.5rem;
+    object-fit: contain;
+  }
+}

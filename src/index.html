@@ -5,67 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <meta name="author" content="Snehamoy Bag">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
   <!-- Stylesheet and Javascript -->
   <script type="module" src="js/index.js"></script>
 </head>
 <body>
-  <header class="header">
+  <header class="header | flex direction-row align-center space-between">
     <a href="#">
       <img src="images/logo.svg" alt="Huddle Logo" class="header__logo">
     </a>
-    <button class="pill-secondary">Try it free</button>
+    <a class="pill-secondary" href="#">Try it free</a>
   </header>
   <main class="main">
-    <section class="hero">
-      <h1 class="hero__title fs-700">Build The Community Your Fans Will Love</h1>
+    <section class="hero | inline-center">
+      <h1 class="hero__title">Build The Community Your Fans Will Love</h1>
       <p class="hero__description">
         Huddle re-imagines the way we build communities. You have a voice, but so does 
         your audience. Create connections with your users as you engage in genuine discussion.
       </p>
-      <button class="pill-primary">Get Started For Free</button>
+      <a class="hero__button | pill-primary" href="#">Get Started For Free</a>
       <img src="images/screen-mockups.svg" alt="Images of screen mockups" class="hero__image">
-      <div class="hero__service-stats">
-        <h2 class="fs-900">1.4k+ <span class="fs-500">Communities Formed</span></h2>
-        <h3 class="fs-900">2.7m+ <span class="fs-500">Messages Sent</span></h3>
+      <div class="hero__service-stats | flex direction-row center-center">
+        <h2>1.4k+ <span>Communities Formed</span></h2>
+        <h3>2.7m+ <span>Messages Sent</span></h3>
       </div>
     </section>
     <div class="services">
-      <section class="services__grow-together">
-        <img src="images/illustrations/illustration-grow-together.svg" alt="illustration grow together" />
-        <h2 class="fs-600">Grow Together</h2>
-        <p>
-          Generate meaningful discussions with your audience and build a strong, loyal community. 
-          Think of the insightful conversations you miss out on with a feedback form. 
-        </p>
+      <section class="services__grow-together | flex direction-row-reverse center-center">
+        <img class="services__illustration" src="images/illustrations/illustration-grow-together.svg" alt="illustration grow together" />
+        <div class="services__txt-content">
+          <h2>Grow Together</h2>
+          <p>
+            Generate meaningful discussions with your audience and build a strong, loyal community. 
+            Think of the insightful conversations you miss out on with a feedback form. 
+          </p>
+        </div>
       </section>
-      <section class="services__flowing-convo">
-        <img src="images/illustrations/illustration-flowing-conversation.svg" alt="illustration flowing conversation" />
-        <h2 class="fs-600">Flowing Conversations</h2>
-        <p>
-          You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
-          just-in-time loading for a more natural flow.
-        </p>
+      <section class="services__flowing-convo | flex direction-row center-center">
+        <img class="services__illustration" src="images/illustrations/illustration-flowing-conversation.svg" alt="illustration flowing conversation" />
+        <div class="services__txt-content">
+          <h2>Flowing Conversations</h2>
+          <p>
+            You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
+            just-in-time loading for a more natural flow.
+          </p>
+        </div>
       </section>
-      <section class="services__your-users">
-        <img src="images/illustrations/illustration-your-users.svg" alt="illustration your users" />
-        <h2 class="fs-600">Your Users</h2>
-        <p>
-          It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
-          once signed in to your app, your users can start chatting immediately.
-        </p>
+      <section class="services__your-users | flex direction-row-reverse center-center">
+        <img class="services__illustration" src="images/illustrations/illustration-your-users.svg" alt="illustration your users" />
+        <div class="services__txt-content">
+          <h2>Your Users</h2>
+          <p>
+            It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
+            once signed in to your app, your users can start chatting immediately.
+          </p>
+        </div>
       </section>
     </div>
     <section class="call-to-action">
-      <h2 class="fs-700">Ready To Build Your Community?</h2>
-      <button class="pill-primary">Get Started For Free</button>
+      <h2 class="call-to-action__title">Ready To Build Your Community?</h2>
+      <a class="pill-primary" href="#">Get Started For Free</a>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer | flex direction-row-reverse space-between">
     <section class="newsletter">
-      <h2 class="fs-600">Newsletter</h2>
+      <h2>Newsletter</h2>
       <p>
         To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address
       </p>
@@ -91,12 +96,12 @@
         <a class="social-media__instagram" href="#" aria-label="Follow us on Instagram"></a>
         <a class="social-media__twitter" href="#" target="Follow us on Twitter"></a>
       </div>
-    </section>
-    <section class="attributions">
-      <p>
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="http://localhost:5173/">Your Name Here</a>.
-    </p>
+      <div class="attributions">
+        <p>
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="http://localhost:5173/">Your Name Here</a>.
+        </p>
+      </div>
     </section>
   </footer>
 </body>

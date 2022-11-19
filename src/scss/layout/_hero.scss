@@ -1,0 +1,54 @@
+.hero {
+  padding: 0 2em;
+  margin-bottom: 7.25rem;
+  
+  &__title {
+    margin-bottom: 1em;
+  }
+  
+  &__description {
+    margin-bottom: 3.75em;
+  }
+  
+  &__button {
+    margin-bottom: 7.5em;
+  }
+  
+  &__image {
+    margin: 0 auto 8.5em;
+  }
+  
+  &__service-stats {
+    gap: 6.75em;
+    
+    h2, h3 {
+      position: relative;
+    }
+    
+    h2::before,
+    h3::before {
+      content: '';
+      width: 0.425em;
+      aspect-ratio: 1/1;
+      position: absolute;
+      top: -0.3em;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    
+    h2::before {
+      background-image: url('/images/icons/icon-communities.svg');
+    }
+    
+    h3::before {
+      background-image: url('/images/icons/icon-messages.svg');
+    }
+    
+    h2 > span,
+    h3 > span {
+      display: block;
+      opacity: 0.75;
+    }
+  }
+}
