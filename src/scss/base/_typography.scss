@@ -19,7 +19,6 @@ p {
   &__title {
     font-family: var(--ff-secondary);
     font-size: var(--fs-700);
-    font-weight: var(--fw-bold);
     line-heigt: 1.4;
   }
 }
@@ -45,22 +44,98 @@ p {
   
   h2 {
     font-size: var(--fs-600);
-    font-weight: var(--fw-bold);
     font-family: var(--ff-secondary);
   }
 }
 
+.footer {
+  color: var(--clr-neutral-400);
+  
+  p,
+  ul {
+    line-height: 1.7;
+ }
+ 
+ a {
+    color: var(--clr-primary-400);
+    
+    &:hover {
+      color: var(--clr-primary-300);
+    }
+    
+    &:active {
+      color: var(--clr-primary-700);
+    }
+    
+    &:visited {
+      color: var(--clr-neutral-400);
+      font-weight: var(--fw-regular);
+    }
+  }
+  
+  &__attributions {
+    font-size: var(--fs-200);
+    text-align: center;
+  }
+}
+
+.extra-info {
+  
+  &__contacts {
+    font-weight: var(--fw-regular);
+  }
+  
+  &__social-media {
+    --icon-size: 1.5rem;
+    font-size: var(--icon-size);
+    
+    a {
+      color: var(--clr-neutral-100);
+    }
+  }
+}
+
+// ------------------------------------------------------------//
 // components
 // buttons
-.pill-primary,
-.cutout-corners-primary {
+.btn {
   color: var(--clr-neutral-100);
-}
-
-button,
-a[class*= "pill-primary"],
-a[class*= "pill-secondary"] {
   text-decoration: none;
   font-weight: var(--fw-semi-bold);
+  text-transform: capitalize;
+  
+  &__pill-secondary {
+    color: var(--clr-primary-400);
+    font-size: var(--fs-200);
+    
+    &:hover {
+      color: var(--clr-primary-300);
+    }
+  }
+  
+  &__cutout-corners {
+    font-weight: var(--fw-bold);
+  }
 }
 
+
+// newsletter
+.newsletter {
+  
+  &__title {
+    text-transform: uppercase;
+    font-size: var(--fs-600);
+    font-weight: var(--fw-semi-bold);
+  }
+  
+  &__email-input {
+    font-weight: var(--fw-regular);
+  }
+  
+  &__error {
+    color: var(--clr-primary-700);
+    font-size: var(--fs-200);
+    font-weight: var(--fw-regular);
+    font-style: italic;
+  }
+}

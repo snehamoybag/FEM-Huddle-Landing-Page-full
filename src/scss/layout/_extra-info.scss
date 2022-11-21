@@ -1,0 +1,56 @@
+.extra-info {
+  
+  &__logo {
+    max-width: 12rem;
+    margin-bottom: 1.5em;
+  }
+  
+  &__description,
+  &__contacts {
+    margin-bottom: 2.85em;
+  }
+  
+  &__contacts,
+  &__social-media {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  &__contacts {
+    
+    li {
+      --background-size: 2em;
+      background-repeat: no-repeat;
+      background-size: var(--background-size) contain;
+      background-position: left center;
+      padding-left: calc(var(--background-size) + 0.85em);
+      margin-bottom: 1.25em;
+      
+      &:nth-of-type(1) {
+        background-image: url('/images/icons/icon-phone.svg');
+      }
+      
+      &:nth-of-type(2) {
+        background-image: url('/images/icons/icon-email.svg');
+      }
+    }
+  }
+  
+  &__social-media {
+    gap: 0.65em;
+    transition: transform 200ms ease-in;
+    margin-bottom: 2.25em;
+    
+    a {
+      
+      &:hover,
+      &:focus {
+        transform: translateY(-5%);
+      }
+      
+      &:active {
+        transform: scale(98%);
+      }
+    }
+  }
+}

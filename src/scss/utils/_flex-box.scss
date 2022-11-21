@@ -1,15 +1,15 @@
 .flex {
   display: flex;
   flex-wrap: wrap;
-}
-
-.direction-row {flex-direction: row;}
-.direction-row-reverse {flex-direction: row-reverse;}
-
-.justify-center {justify-content: center;}
-.space-between {justify-content: space-between;}
-.align-center {align-items: center;}
-.center-center {
-  justify-content: center;
-  align-items: center;
+  
+  &__row {flex-direction: row;}
+  &__row-reverse {flex-direction: row-reverse;}
+  
+  &__justify-center {justify-content: center;}
+  &__space-between {justify-content: space-between;}
+  &__align-center {align-items: center;}
+  &__center-center {
+    justify-content: center;
+    align-items: center;
+  }
 }

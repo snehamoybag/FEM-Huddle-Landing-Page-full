@@ -9,30 +9,32 @@
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
   <!-- Stylesheet and Javascript -->
   <script type="module" src="js/index.js"></script>
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/9d44445160.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="header | flex direction-row align-center space-between">
+  <header class="header | flex flex__row flex__align-center flex__space-between">
     <a href="#">
-      <img src="images/logo.svg" alt="Huddle Logo" class="header__logo">
+      <img src="images/logos/logo.svg" alt="Huddle Logo" class="header__logo">
     </a>
-    <a class="pill-secondary" href="#">Try it free</a>
+    <a class="btn btn__pill-secondary" href="#">Try it free</a>
   </header>
   <main class="main">
-    <section class="hero | inline-center">
+    <section class="hero">
       <h1 class="hero__title">Build The Community Your Fans Will Love</h1>
       <p class="hero__description">
         Huddle re-imagines the way we build communities. You have a voice, but so does 
         your audience. Create connections with your users as you engage in genuine discussion.
       </p>
-      <a class="hero__button | pill-primary" href="#">Get Started For Free</a>
-      <img src="images/screen-mockups.svg" alt="Images of screen mockups" class="hero__image">
-      <div class="hero__service-stats | flex direction-row center-center">
+      <a class="hero__button | btn btn__pill-primary" href="#">Get Started For Free</a>
+      <img src="images/contents/screen-mockups.svg" alt="Images of screen mockups" class="hero__image">
+      <div class="hero__service-stats | flex flex__row flex__center-center">
         <h2>1.4k+ <span>Communities Formed</span></h2>
         <h3>2.7m+ <span>Messages Sent</span></h3>
       </div>
     </section>
     <div class="services">
-      <section class="services__grow-together | flex direction-row-reverse center-center">
+      <section class="services__grow-together | flex flex__row-reverse flex__center-center">
         <img class="services__illustration" src="images/illustrations/illustration-grow-together.svg" alt="illustration grow together" />
         <div class="services__txt-content">
           <h2>Grow Together</h2>
@@ -42,7 +44,7 @@
           </p>
         </div>
       </section>
-      <section class="services__flowing-convo | flex direction-row center-center">
+      <section class="services__flowing-convo | flex flex__row flex__center-center">
         <img class="services__illustration" src="images/illustrations/illustration-flowing-conversation.svg" alt="illustration flowing conversation" />
         <div class="services__txt-content">
           <h2>Flowing Conversations</h2>
@@ -52,7 +54,7 @@
           </p>
         </div>
       </section>
-      <section class="services__your-users | flex direction-row-reverse center-center">
+      <section class="services__your-users | flex flex__row-reverse flex__center-center">
         <img class="services__illustration" src="images/illustrations/illustration-your-users.svg" alt="illustration your users" />
         <div class="services__txt-content">
           <h2>Your Users</h2>
@@ -65,44 +67,45 @@
     </div>
     <section class="call-to-action">
       <h2 class="call-to-action__title">Ready To Build Your Community?</h2>
-      <a class="pill-primary" href="#">Get Started For Free</a>
+      <a class="btn btn__pill-primary" href="#">Get Started For Free</a>
     </section>
   </main>
-  <footer class="footer | flex direction-row-reverse space-between">
-    <section class="newsletter">
-      <h2>Newsletter</h2>
-      <p>
-        To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address
-      </p>
-      <form class="newsletter__subscribe_form">
-        <label for="newsletter-email">
-          <input class="newsletter__email-input" type="email" id="newsletter-email" name="newsletter-email" aria-label="Enter your email address" required>
-        </label>
-        <button class="cutout-corners-primary" type="submit">Subscribe</button>
-      </form>
-    </section>
-    <section class="extra-info">
-      <img src="images/logo.svg" alt="Huddle Logo" class="footer__logo">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
-        vestibulum a, ultrices quis sem.
-      </p>
-    </section>
-    <section class="contacts">
-      <p class="contacts__phone">Phone: +1-543-123-4567</p>
-      <p class="contacts__email">example@huddle.com</p>
-      <div class="social-media">
-        <a class="social-media__facebook" href="#" aria-label="Follow us on Faceebook"></a>
-        <a class="social-media__instagram" href="#" aria-label="Follow us on Instagram"></a>
-        <a class="social-media__twitter" href="#" target="Follow us on Twitter"></a>
-      </div>
-      <div class="attributions">
-        <p>
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-          Coded by <a href="http://localhost:5173/">Your Name Here</a>.
+  <footer class="footer">
+    <div class="footer__contents-wrapper | flex flex__row-reverse">
+      <section class="newsletter">
+        <h2 class="newsletter__title">Newsletter</h2>
+        <p class="newsletter__description">
+          To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address
         </p>
-      </div>
-    </section>
+        <form class="newsletter__form | flex flex__row flex__center-center">
+          <label class="newsletter__email-label" for="newsletter-email">
+            <input class="newsletter__email-input" type="email" id="newsletter-email" name="newsletter-email" aria-label="Enter your email address" required>
+            <span class="newsletter__error" id="newsletter-error">Check your email please</span>
+          </label>
+          <button class="newsletter__button | btn btn__cutout-corners" id="btn-newsletter" type="submit">Subscribe</button>
+        </form>
+      </section>
+      <section class="extra-info">
+        <img class="extra-info__logo" src="images/logos/logo-footer.svg" alt="Huddle Logo">
+        <p class="extra-info__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
+          vestibulum a, ultrices quis sem.
+        </p>
+        <ul class="extra-info__contacts">
+          <li>Phone: +1-543-123-4567</li>
+          <li>example@huddle.com</li>
+        </ul>
+        <div class="extra-info__social-media | flex flex__row flex__align-center">
+          <a href="#" aria-label="Follow us on Faceebook"><span class="fa-brands fa-square-facebook fa-1x"></span></a>
+          <a href="#" aria-label="Follow us on Instagram"><span class="fa-brands fa-instagram fa-1x"></span></a>
+          <a href="#" aria-label="Follow us on Twitter"><span class="fa-brands fa-square-twitter fa-1x"></span></a>
+        </div>
+      </section>
+    </div>
+    <p class="footer__attributions">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="http://localhost:5173/">Your Name Here</a>.
+    </p>
   </footer>
 </body>
 </html>
