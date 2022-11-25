@@ -1,0 +1,59 @@
+.btn {
+  --pill-primary-padding: 0.75em 2.5em;
+  --pill-transparent-padding: 0.5em 1.75em;
+  --cut-corners-padding: var(--pill-primary-padding);
+  --dark-shadow: 0 0.35em 5px hsla(0, 0%, 0%, 0.1);
+  --adaptive-shadow: 0 0 10px -5px currentColor;
+  
+  &:hover {
+    cursor: pointer;
+  }
+  
+  &:focus {
+    outline: 0.25em dotted var(--clr-primary-300);
+    outline-offset: 0.5em;
+  }
+  
+  &:active {
+    transform: scale(97%);
+    box-shadow: none;
+  }
+  
+  &--pill-primary,
+  &--pill-transparent {
+    border-radius: 100vmax; // gives pill shape
+  }
+  
+  &--pill-primary,
+  &--cut-corners {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-100);
+    border: none;
+    box-shadow: var(--dark-shadow);
+    
+    &:hover {
+      background-color: var(--clr-primary-300);
+    }
+  }
+  
+  &--pill-primary {
+    padding: var(--pill-primary-padding);
+  }
+  
+  &--pill-transparent {
+    padding: var(--pill-transparent-padding);
+    background-color: transparent;
+    color: var(--clr-primary-400);
+    border: 1.5px solid currentColor;
+    box-shadow: var(--adaptive-shadow);
+    
+    &:hover {
+      color: var(--clr-primary-300);
+    }
+  }
+  
+  &--cut-corners {
+    padding: var(--cut-corners-padding);
+    border-radius: 0.25rem;
+  }
+}

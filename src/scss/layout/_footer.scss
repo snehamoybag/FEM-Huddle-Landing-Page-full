@@ -4,4 +4,9 @@
   &::before {
     content: '';
   }
+  
+  p {
+    line-height: 1.7;
+    opacity: 0.75;
+  }
 }

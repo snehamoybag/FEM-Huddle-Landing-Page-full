@@ -1,4 +1,14 @@
 .services {
+  --text-align: center;
+  --content-spacing: 5rem;
+  --illustration-size: 70%;
+  
+  > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--content-spacing);
+  }
   
   &__grow-together,
   &__your-users {
@@ -8,5 +18,17 @@
     &::after {
       content: '';
     }
+  }
+  
+  &__txt-content {
+    text-align: var(--text-align);
+    
+    .title {
+      margin-bottom: 0.75em;
+    }
+  }
+  
+  &__illustration {
+    width: var(--illustration-size);
   }
 }
