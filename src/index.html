@@ -7,9 +7,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
-  
+  <!-- Styles and Scripts -->
+  <script type="module" src="js/index.js"></script>
   <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/9d44445160.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/9d44445160.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
   <header class="header">
@@ -18,9 +19,9 @@
   </header>
   <main class="main">
     <section class="hero">
-      <div class="signup-call">
-        <h1 class="signup-call__title">Build The Community Your Fans Will Love</h1>
-        <p class="signup-call__description">
+      <div class="hero__text-content">
+        <h1 class="title title--ff-primary title--big">Build The Community Your Fans Will Love</h1>
+        <p class="hero__description">
           Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion. 
         </p>
         <button class="btn">Get Started For Free</button>
@@ -28,20 +29,20 @@
       </div>
     </section>
     <section class="stats">
-      <p class="stats__info">
-        <span>1.4k+</span>
-        Communities Formed
+      <p class="stats--community">
+        <span class="title title--ff-secondary title--very-big">1.4k+</span>
+        <span class="stats__description">Communities Formed</span>
       </p>
-      <p class="stats__info">
-        <span>2.7m+</span>
-        Messages Sent
+      <p class="stats--messages">
+        <span class="title title--ff-secondary title--very-big">2.7m+</span>
+        <span class="stats__description">Messages Sent</span>
       </p>
     </section>
     <section class="services">
-      <div class="services__grow-together">
+      <div class="services__grow-together | bg bg--clr_light bg--wave-top_light1 bg--wave-bottom_light1">
         <img class="sercvices__illustration" src="images/illustrations/illustration-grow-together.svg" alt="An illustration image of togetherness">
         <div class="services__txt-content">
-          <h2 class="services__title">Grow Together</h2>
+          <h2 class="title title--medium title--ff-primary">Grow Together</h2>
           <p class="services__description">
             Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form. 
           </p>
@@ -50,28 +51,28 @@
       <div class="services__flowing-conversations">
         <img class="sercvices__illustration" src="images/illustrations/illustration-flowing-conversation.svg" alt="An illustration image of colleagues having a conversation">
         <div class="services__txt-content">
-          <h2 class="services__title">Flowing Conversations</h2>
+          <h2 class="title title--medium title--ff-primary">Flowing Conversations</h2>
           <p class="services__description">
             You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.
           </p>
         </div>
       </div>
-      <div class="services__your-users">
+      <div class="services__your-users | bg bg--clr_light bg--wave-top_light2 bg--wave-bottom_light2">
         <img class="sercvices__illustration" src="images/illustrations/illustration-your-users.svg" alt="An illustration image of users interacting through chatting feature">
         <div class="services__txt-content">
-          <h2 class="services__title">Your Users</h2>
+          <h2 class="title title--medium title--ff-primary">Your Users</h2>
           <p class="services__description">
             It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.
           </p>
         </div>
       </div>
     </section>
-    <section class="signup-call">
-      <h2 class="signup-call__title">Ready To Build Your Community?</h2>
+    <section class="ready-to-signup">
+      <h2 class="title title--big title--ff-primary">Ready To Build Your Community?</h2>
       <button class="btn">Get Started For Free</button>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer | bg bg--clr_dark bg--wave-top_dark">
     <section class="newsletter">
       <h2 class="newsletter__title">Newsletter</h2>
       <p class="newsletter__description">
@@ -102,7 +103,7 @@
     </section>
     <section class="attribution">
       <p class="attribution__info">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="http://localhost:5174/">Your Name Here</a>.
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="http://localhost:5173/">Your Name Here</a>.
       </p>
     </section>
   </footer>

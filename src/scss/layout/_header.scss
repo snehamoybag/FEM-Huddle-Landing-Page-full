@@ -1,0 +1,13 @@
+.header {
+  --logo-width: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.5em 1em;
+  margin-bottom: 6.5rem;
+  
+  &__logo {
+    width: var(--logo-width);
+    object-fit: contain;
+  }
+}

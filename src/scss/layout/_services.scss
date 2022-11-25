@@ -1,0 +1,12 @@
+.services {
+  
+  &__grow-together,
+  &__your-users {
+    
+    // enable waves
+    &::before,
+    &::after {
+      content: '';
+    }
+  }
+}

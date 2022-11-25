@@ -1,2 +1,2 @@
 // Stylesheet
-import '/scss/styles.scss'
+import '/scss/style.scss'

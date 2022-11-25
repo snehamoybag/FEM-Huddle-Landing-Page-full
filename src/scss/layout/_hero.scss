@@ -1,0 +1,27 @@
+.hero {
+  --title-bottom-spacing: 1.5rem;
+  --desc-bottom-spacing: 3rem;
+  --btn-bottom-spacing: 6.5rem;
+  --image-max-width: 85%;
+  --image-position: 0 auto;
+  text-align: center;
+  margin-bottom: 7.75rem;
+  
+  .title {
+    margin-bottom: var(--title-bottom-spacing);
+  }
+  
+  &__description {
+    margin-bottom: var(--desc-bottom-spacing);
+  }
+  
+  .btn {
+    margin-bottom: var(--btn-bottom-spacing);
+  }
+  
+  &__image {
+    max-width: var(--image-max-width);
+    object-fit: contain;
+    margin: var(--image-position);
+  }
+}
