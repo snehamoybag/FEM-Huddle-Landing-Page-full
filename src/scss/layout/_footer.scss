@@ -1,12 +1,27 @@
 .footer {
   color: var(--clr-neutral-200);
-  // enable top wave
+  --newsletter-margin-bottom: 5.75rem;
+  --site-info-margin-bottom: 2rem;
+  
+  // enable top curve
   &::before {
     content: '';
   }
   
-  p {
-    line-height: 1.7;
+  > * {
+    padding: 0 2em;
+  }
+  
+  p,
+  li span {
     opacity: 0.75;
+  }
+  
+  .newsletter {
+    margin-bottom: var(--newsletter-margin-bottom);
+  }
+  
+  .site-info {
+    margin-bottom: var(--site-info-margin-bottom);
   }
 }

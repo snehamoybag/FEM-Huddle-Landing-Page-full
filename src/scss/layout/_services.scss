@@ -4,6 +4,7 @@
   --illustration-size: 70%;
   
   > * {
+    padding: 0 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +14,7 @@
   &__grow-together,
   &__your-users {
     
-    // enable waves
+    // enable curves
     &::before,
     &::after {
       content: '';

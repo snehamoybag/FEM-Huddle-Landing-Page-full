@@ -1,0 +1,53 @@
+.site-info {
+  --logo-max-width: 12rem;
+  --contacts-line-gap: 1.25em;
+  --contacts-icon-size: 1em; // depends on li element top-bottom padding
+  --contacts-icon-text-gap: 1.5rem;
+  
+  &__logo {
+    max-width: var(--logo-max-width);
+    margin-bottom: 1rem;
+  }
+  
+  &__description {
+    line-height: 1.7;
+  }
+  
+  &__description,
+  &__contacts {
+    margin-bottom: 3rem;
+  }
+  
+  &__contacts,
+  &__social-media {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  &__contacts {
+    
+    
+    &--phone-number,
+    &--email-address {
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: var(--contacts-icon-size) contain;
+      padding-left: calc(var(--contacts-icon-size) + var(--contacts-icon-text-gap));
+      font-weight: var(--fw-regular);
+    }
+    
+    &--phone-number {
+      background-image: url('/images/icons/icon-phone.svg');
+      margin-bottom: var(--contacts-line-gap);
+    }
+    
+    &--email-address {
+      background-image: url('/images/icons/icon-email.svg');
+    }
+  }
+  
+  &__social-media {
+    outline: 1px solid lime;
+    display: inline-flex;
+  }
+}

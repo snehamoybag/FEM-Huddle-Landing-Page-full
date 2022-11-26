@@ -1,11 +1,11 @@
 .bg {
-  --wave-top-light1: url('/images/backgrounds/bg-section-top-mobile-1.svg');
-  --wave-top-light2: url('/images/backgrounds/bg-section-top-mobile-2.svg');
-  --wave-top-dark: url('/images/backgrounds/bg-footer-top-mobile.svg');
+  --curve-top-light1: url('/images/backgrounds/bg-section-top-mobile-1.svg');
+  --curve-top-light2: url('/images/backgrounds/bg-section-top-mobile-2.svg');
+  --curve-top-dark: url('/images/backgrounds/bg-footer-top-mobile.svg');
   
-  --wave-bottom-light1: url('/images/backgrounds/bg-section-bottom-mobile-1.svg');
-  --wave-bottom-light2: url('/images/backgrounds/bg-section-bottom-mobile-2.svg');
-  --wave-bottom-dark: url('/images/backgrounds/bg-footer-top-mobile.svg');
+  --curve-bottom-light1: url('/images/backgrounds/bg-section-bottom-mobile-1.svg');
+  --curve-bottom-light2: url('/images/backgrounds/bg-section-bottom-mobile-2.svg');
+  --curve-bottom-dark: url('/images/backgrounds/bg-footer-top-mobile.svg');
   
   &--clr {
     
@@ -15,13 +15,31 @@
     
     &_dark {
       background-color: var(--clr-neutral-900);
+      
+      // default anchor tag styling on dark bg
+      a {
+        color: var(--clr-primary-400);
+        
+        &:hover,
+        &:visited {
+          color: var(--clr-primary-300);
+        }
+        
+        &:visited {
+          text-decoration: dotted;
+        }
+        
+        &:active {
+          color: var(--clr-secondary-400);
+        }
+      }
     }
   }
   
-  &--wave-top,
-  &--wave-bottom {
+  &--curve-top,
+  &--curve-bottom {
     /*
-    to use the waves (after adding it to html), explicitly define the 'content' property on every layout. 
+    to use the curves (after adding it to html), explicitly define the 'content' property on every layout. 
     
     to use top wave :-
       .div::before { content: ''; }
@@ -44,7 +62,6 @@
         height: var(--bg-height);
         background-repeat: no-repeat;
         background-size: contain;
-        z-index: -1;
       }
       
       &::before {
@@ -59,50 +76,50 @@
     }
   }
   
-  &--wave-top {
+  &--curve-top {
     
     &_light1 {
       
       &::before {
-        background-image: var(--wave-top-light1);
+        background-image: var(--curve-top-light1);
       }
     }
     
     &_light2 {
       
       &::before {
-        background-image: var(--wave-top-light2);
+        background-image: var(--curve-top-light2);
       }
     }
     
     &_dark {
       
       &::before {
-        background-image: var(--wave-top-dark);
+        background-image: var(--curve-top-dark);
       }
     }
   }
   
-  &--wave-bottom {
+  &--curve-bottom {
     
     &_light1 {
       
       &::after {
-        background-image: var(--wave-bottom-light1);
+        background-image: var(--curve-bottom-light1);
       }
     }
     
     &_light2 {
       
       &::after {
-        background-image: var(--wave-bottom-light2);
+        background-image: var(--curve-bottom-light2);
       }
     }
     
     &_dark {
       
       &::after {
-        background-image: var(--wave-bottom-dark);
+        background-image: var(--curve-bottom-dark);
       }
     }
   }

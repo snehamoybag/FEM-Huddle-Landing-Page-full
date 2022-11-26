@@ -8,6 +8,7 @@
   }
   
   &__description {
+    line-height: 1.8;
     margin-bottom: 2rem;
   }
   
@@ -36,5 +37,6 @@
   .btn {
     display: block;
     margin-left: auto;
+    font-weight: var(--fw-bold);
   }
 }
