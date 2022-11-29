@@ -1,11 +1,15 @@
 .hero {
   --title-bottom-spacing: 1.5rem;
   --desc-bottom-spacing: 3rem;
+  --desc-max-width: 55ch;
   --btn-bottom-spacing: 6.5rem;
-  --image-max-width: 85%;
   --image-position: 0 auto;
+  padding: 0 var(--side-padding);
   text-align: center;
-  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 7.75rem;
   
   .title {
@@ -14,15 +18,16 @@
   
   &__description {
     margin-bottom: var(--desc-bottom-spacing);
+    max-width: var(--desc-max-width);
   }
   
   .btn {
     margin-bottom: var(--btn-bottom-spacing);
-    display: inline-block;
   }
   
   &__image {
-    max-width: var(--image-max-width);
+    width: var(--hero-image-width);
+    max-width: 70rem;
     object-fit: contain;
     margin: var(--image-position);
   }

@@ -1,15 +1,31 @@
+@use '../abstracts/breakpoints' as brk;
+
 .footer {
-  color: var(--clr-neutral-200);
   --newsletter-margin-bottom: 5.75rem;
   --site-info-margin-bottom: 2rem;
+  color: var(--clr-neutral-200);
+  padding: 3.5em var(--side-padding) 0;
+  display: grid; // requires for the wave to not affected by side paddings (weird)
+  
+  @include brk.minWidth(small) {
+    --newsletter-margin-bottom: 0;
+    --site-info-margin-bottom: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'site-info newsletter'
+      'attribution attribution';
+    grid-column-gap: 5rem;
+    grid-row-gap: 2rem;
+  }
+  
+  @include brk.minWidth(large) {
+    grid-column-gap: 10rem;
+  }
   
   // enable top curve
   &::before {
     content: '';
-  }
-  
-  > * {
-    padding: 0 2em;
   }
   
   p,
@@ -19,9 +35,24 @@
   
   .newsletter {
     margin-bottom: var(--newsletter-margin-bottom);
+    
+    @include brk.minWidth(small) {
+      grid-area: newsletter;
+    }
   }
   
   .site-info {
     margin-bottom: var(--site-info-margin-bottom);
+    
+    @include brk.minWidth(small) {
+      grid-area: site-info;
+    }
+  }
+  
+  .attribution {
+    
+    @include brk.minWidth(small) {
+      grid-area: attribution;
+    }
   }
 }

@@ -1,5 +1,13 @@
+@use '../abstracts/breakpoints' as brk;
+
 .newsletter {
   --email-input-padding: 1em;
+  --btn-margin: 1rem 0 0 auto;
+    
+  @include brk.minWidth(medium) {
+    --email-input-padding: 0.75em 1em;
+    --btn-margin: 0;
+  }
   
   .title {
     text-transform: uppercase;
@@ -12,6 +20,20 @@
     margin-bottom: 2rem;
   }
   
+  &__form {
+    
+    @include brk.minWidth(medium) {
+      
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        'input btn'
+        'err err';
+      grid-column-gap: 2rem;
+    }
+  }
+  
   &__input-email {
     display: block;
     width: 100%;
@@ -20,7 +42,10 @@
     border-radius: 0.25em;
     font-weight: var(--fw-regular);
     color: var(--clr-neutral-900);
-    margin-bottom: 1rem;
+    
+    @include brk.minWidth(medium) {
+      grid-area: input;
+    }
     
     &:focus {
       outline: 2px solid var(--clr-primary-400);
@@ -32,11 +57,36 @@
     color: var(--clr-secondary-400);
     font-style: italic;
     display: none;
+    
+    @include brk.minWidth(medium) {
+      grid-area: err;
+    }
   }
   
   .btn {
     display: block;
-    margin-left: auto;
+    margin: var(--btn-margin);
     font-weight: var(--fw-bold);
+    
+    @include brk.minWidth(medium) {
+      grid-area: btn;
+    }
+  }
+}
+
+// Javascript functionality
+.error {
+  
+  .newsletter__input-email {
+    color: var(--clr-secondary-400);
+    outline: 1px solid currentColor;
+    
+    &:focus {
+      outline: 1px solid currentColor;
+    }
+  }
+  
+  .newsletter__email-error {
+    display: block;
   }
 }

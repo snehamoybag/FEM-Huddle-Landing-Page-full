@@ -38,12 +38,6 @@ body {
   line-height: 1.5;
 }
 
-/* default focus styling for anchor tags */
-a:focus {
-  outline: 1px dotted currentColor;
-  outline-offset: 0.25em;
-}
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;

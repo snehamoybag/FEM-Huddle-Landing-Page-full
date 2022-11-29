@@ -4,6 +4,7 @@
   --cut-corners-padding: var(--pill-primary-padding);
   --dark-shadow: 0 0.35em 5px hsla(0, 0%, 0%, 0.1);
   --adaptive-shadow: 0 0 10px -5px currentColor;
+  display: inline-block;
   
   &:hover {
     cursor: pointer;

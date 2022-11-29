@@ -1,10 +1,16 @@
+@use '../abstracts/breakpoints' as brk;
+
 .header {
-  --logo-width: 100px;
+  --logo-width: 7.5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1.5em 1em;
+  padding: var(--side-padding);
   margin-bottom: 6.5rem;
+  
+  @include brk.minWidth(small) {
+    padding: 2em 2em;
+  }
   
   &__logo {
     width: var(--logo-width);

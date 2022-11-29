@@ -32,8 +32,11 @@
       background-repeat: no-repeat;
       background-position: left center;
       background-size: var(--contacts-icon-size) contain;
-      padding-left: calc(var(--contacts-icon-size) + var(--contacts-icon-text-gap));
       font-weight: var(--fw-regular);
+      
+      span {
+        padding-left: calc(var(--contacts-icon-size) + var(--contacts-icon-text-gap));
+      }
     }
     
     &--phone-number {

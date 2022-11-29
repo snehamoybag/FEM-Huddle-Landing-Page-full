@@ -1,14 +1,35 @@
+@use '../abstracts/breakpoints' as brk;
+
 .services {
   --text-align: center;
-  --content-spacing: 5rem;
-  --illustration-size: 70%;
+  --title-margin-bottom: 1.15rem;
+  --illustration-size: min(70%, 30rem);
+  --txt-content-max-width: 60ch;
+  --flex-direction: column;
+  --content-gap: 5rem;
+  --grow-together-padding: 5.75em var(--side-padding) 3em;
+  --flow-convo-padding: 0 var(--side-padding);
+  --your-users-padding: 0 var(--side-padding) 7em;
+  margin-bottom: 10rem;
+  
+  @include brk.minWidth(small) {
+    --illustration-size: min(45%, 30rem);
+    --text-align: left;
+    --flex-direction: row-reverse;
+    --content-gap: 3rem;
+  }
+  
+  @include brk.minWidth(large) {
+    --content-gap: 10rem;
+  }
+  
   
   > * {
-    padding: 0 2em;
     display: flex;
-    flex-direction: column;
+    flex-direction: var(--flex-direction);
     align-items: center;
-    gap: var(--content-spacing);
+    justify-content: center;
+    gap: var(--content-gap);
   }
   
   &__grow-together,
@@ -21,11 +42,30 @@
     }
   }
   
+  &__grow-together {
+    padding: var(--grow-together-padding);
+    margin-bottom: 10rem;
+  }
+  
+  &__flowing-conversations {
+    padding: var(--flow-convo-padding);
+    margin-bottom: 13.5rem;
+    
+    @include brk.minWidth(small) {
+      --flex-direction: row;
+    }
+  }
+  
+  &__your-users {
+    padding: var(--your-users-padding);
+  }
+  
   &__txt-content {
     text-align: var(--text-align);
+    max-width: var(--txt-content-max-width);
     
     .title {
-      margin-bottom: 0.75em;
+      margin-bottom: var(--title-margin-bottom);
     }
   }
   

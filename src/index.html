@@ -19,14 +19,12 @@
   </header>
   <main class="main">
     <section class="hero">
-      <div class="hero__text-content">
-        <h1 class="title title--ff-primary title--big">Build The Community Your Fans Will Love</h1>
-        <p class="hero__description">
-          Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion. 
-        </p>
-        <a class="btn btn--pill-primary" href="#">Get Started For Free</a>
-        <img class="hero__image" src="images/contents/screen-mockups.svg" alt="An Illustration image of screen mockups">
-      </div>
+      <h1 class="title title--ff-primary title--big">Build The Community Your Fans Will Love</h1>
+      <p class="hero__description">
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion. 
+      </p>
+      <a class="btn btn--pill-primary" href="#">Get Started For Free</a>
+      <img class="hero__image" src="images/contents/screen-mockups.svg" alt="An Illustration image of screen mockups">
     </section>
     <section class="stats">
       <p class="stats--community">
@@ -74,13 +72,13 @@
   </main>
   <footer class="footer | bg bg--clr_dark bg--curve-top_dark">
     <section class="newsletter">
-      <h2 class="title title--medium title--ff-secondary">Newsletter</h2>
+      <h2 class="title title--small title--ff-secondary">Newsletter</h2>
       <p class="newsletter__description">
         To recieve tips on how to grow your community, sign up to our weekly newsletter. We'll never send you spam or pass on your email address
       </p>
-      <form class="newsletter__form" action="get">
+      <form class="newsletter__form" id="newsletter-form" action="/" method="GET">
+          <input class="newsletter__input-email" type="email" id="newsletter-email" name="newsletter-email">
           <label for="newsletter-email">
-            <input class="newsletter__input-email" type="email" id="newsletter-email" name="newsletter-email">
             <span class="newsletter__email-error" id="error-email-msg">Check your email please</span>
           </label>
           <button class="btn btn--cut-corners" type="submit">Subscribe</button>

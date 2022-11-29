@@ -1,3 +1,5 @@
+@use '../abstracts/breakpoints' as brk;
+
 .bg {
   --curve-top-light1: url('/images/backgrounds/bg-section-top-mobile-1.svg');
   --curve-top-light2: url('/images/backgrounds/bg-section-top-mobile-2.svg');
@@ -6,6 +8,19 @@
   --curve-bottom-light1: url('/images/backgrounds/bg-section-bottom-mobile-1.svg');
   --curve-bottom-light2: url('/images/backgrounds/bg-section-bottom-mobile-2.svg');
   --curve-bottom-dark: url('/images/backgrounds/bg-footer-top-mobile.svg');
+  
+  --curve-height: 100%;
+  --curve-pos: calc(0% - var(--curve-height)); // negative height
+  
+  @include brk.minWidth(small) {
+    --curve-top-light1: url('/images/backgrounds/bg-section-top-desktop-1.svg');
+    --curve-top-light2: url('/images/backgrounds/bg-section-top-desktop-2.svg');
+    --curve-top-dark: url('/images/backgrounds/bg-footer-top-desktop.svg');
+    
+    --curve-bottom-light1: url('/images/backgrounds/bg-section-bottom-desktop-1.svg');
+    --curve-bottom-light2: url('/images/backgrounds/bg-section-bottom-desktop-2.svg');
+    --curve-bottom-dark: url('/images/backgrounds/bg-footer-top-desktop.svg');
+  }
   
   &--clr {
     
@@ -26,7 +41,12 @@
         }
         
         &:visited {
-          text-decoration: dotted;
+          text-decoration: dotted-underline;
+        }
+        
+        &:focus {
+          outline: 1px dotted currentColor;
+          outline-offset: 0.5em;
         }
         
         &:active {
@@ -51,27 +71,28 @@
     &_light1,
     &_light2,
     &_dark {
-      --bg-height: 50%;
-      --bg-pos: calc(0% - var(--bg-height)); // negative height
       position: relative;
       
       &::before,
       &::after {
         position: absolute;
         width: 100%;
-        height: var(--bg-height);
+        height: var(--curve-height);
         background-repeat: no-repeat;
         background-size: contain;
+        z-index: -1;
       }
       
       &::before {
-        top: var(--bg-pos);
+        top: var(--curve-pos);
         background-position: bottom center;
+        //outline: 1px solid red;
       }
       
       &::after {
-        bottom: var(--bg-pos);
+        bottom: var(--curve-pos);
         background-position: top center;
+        //outline: 1px solid green;
       }
     }
   }
