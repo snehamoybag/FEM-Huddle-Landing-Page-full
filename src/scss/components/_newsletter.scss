@@ -1,23 +1,28 @@
 @use '../abstracts/breakpoints' as brk;
 
 .newsletter {
+  --title-margin-bottom: 1rem;
+  --desc-margin-bottom: 2rem;
+  --desc-max-width: 45ch;
   --email-input-padding: 1em;
   --btn-margin: 1rem 0 0 auto;
     
   @include brk.minWidth(medium) {
     --email-input-padding: 0.75em 1em;
     --btn-margin: 0;
+    --title-margin-bottom: 1.5rem;
   }
   
   .title {
     text-transform: uppercase;
     color: var(--clr-neutral-100);
-    margin-bottom: 1rem;
+    margin-bottom: var(--title-margin-bottom);
   }
   
   &__description {
     line-height: 1.8;
-    margin-bottom: 2rem;
+    max-width: var(--desc-max-width);
+    margin-bottom: var(--desc-margin-bottom);
   }
   
   &__form {
@@ -26,7 +31,6 @@
       
       display: grid;
       grid-template-columns: 3fr 1fr;
-      grid-template-rows: auto;
       grid-template-areas: 
         'input btn'
         'err err';

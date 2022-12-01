@@ -10,7 +10,7 @@
   --curve-bottom-dark: url('/images/backgrounds/bg-footer-top-mobile.svg');
   
   --curve-height: 100%;
-  --curve-pos: calc(0% - var(--curve-height)); // negative height
+  --curve-pos: calc(1% - var(--curve-height)); // negative height
   
   @include brk.minWidth(small) {
     --curve-top-light1: url('/images/backgrounds/bg-section-top-desktop-1.svg');

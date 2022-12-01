@@ -17,6 +17,7 @@
       'attribution attribution';
     grid-column-gap: 5rem;
     grid-row-gap: 2rem;
+    //justify-items: center;
   }
   
   @include brk.minWidth(large) {

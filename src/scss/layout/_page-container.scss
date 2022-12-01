@@ -1,0 +1,10 @@
+@use '../abstracts/breakpoints' as brk;
+
+.page-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  
+  @include brk.minWidth(xlarge) {
+    box-shadow: 0 0px 25px 25px var(--clr-neutral-200);
+  }
+}

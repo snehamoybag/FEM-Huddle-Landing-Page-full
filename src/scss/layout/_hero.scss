@@ -1,3 +1,5 @@
+@use '../abstracts/breakpoints' as brk;
+
 .hero {
   --title-bottom-spacing: 1.5rem;
   --desc-bottom-spacing: 3rem;
@@ -27,7 +29,6 @@
   
   &__image {
     width: var(--hero-image-width);
-    max-width: 70rem;
     object-fit: contain;
     margin: var(--image-position);
   }

@@ -8,6 +8,7 @@
   --flex-direction: column;
   --content-gap: 5rem;
   --grow-together-padding: 5.75em var(--side-padding) 3em;
+  --grow-together-margin-bottom: 10rem;
   --flow-convo-padding: 0 var(--side-padding);
   --your-users-padding: 0 var(--side-padding) 7em;
   margin-bottom: 10rem;
@@ -17,10 +18,18 @@
     --text-align: left;
     --flex-direction: row-reverse;
     --content-gap: 3rem;
+    --grow-together-padding: 2em var(--side-padding);
+    --flow-convo-padding: 2em var(--side-padding);
+    --your-users-padding: 2em var(--side-padding);
+  }
+  
+  @include brk.minWidth(medium) {
+    margin-bottom: 17.5rem;
   }
   
   @include brk.minWidth(large) {
-    --content-gap: 10rem;
+    --grow-together-margin-bottom: 17.5rem;
+    --content-gap: 7.5rem;
   }
   
   
@@ -44,7 +53,7 @@
   
   &__grow-together {
     padding: var(--grow-together-padding);
-    margin-bottom: 10rem;
+    margin-bottom: var(--grow-together-margin-bottom);
   }
   
   &__flowing-conversations {

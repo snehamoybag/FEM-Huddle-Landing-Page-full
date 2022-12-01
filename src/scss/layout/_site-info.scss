@@ -1,16 +1,28 @@
+@use '../abstracts/breakpoints' as brk;
+
 .site-info {
-  --logo-max-width: 12rem;
+  --logo-width: 12rem;
+  --logo-margin-bottom: 1rem;
   --contacts-line-gap: 1.25em;
   --contacts-icon-size: 1em; // depends on li element top-bottom padding
   --contacts-icon-text-gap: 1.5rem;
+  --desc-max-width: 40ch;
+  --social-icon-size: var(--fs-700);
+  
+  @include brk.minWidth(medium) {
+    --logo-width: 20rem;
+    --logo-margin-bottom: 2rem;
+    --social-icon-size: var(--fs-600);
+  }
   
   &__logo {
-    max-width: var(--logo-max-width);
-    margin-bottom: 1rem;
+    width: var(--logo-width);
+    margin-bottom: var(--logo-margin-bottom);
   }
   
   &__description {
     line-height: 1.7;
+    max-width: var(--desc-max-width);
   }
   
   &__description,
@@ -50,7 +62,21 @@
   }
   
   &__social-media {
-    outline: 1px solid lime;
-    display: inline-flex;
+    font-size: var(--social-icon-size);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    
+    li {
+      transition: transform 100ms ease;
+      
+      &:hover {
+        transform: translateY(-10%);
+      }
+    }
+    
+    li a {
+      color: var(--clr-neutral-100);
+    }
   }
 }

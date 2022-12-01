@@ -26,19 +26,23 @@
   
   /* layouts */
   --side-padding: 2.25em;
-  --hero-image-width: 100%;
+  --hero-image-width: min(100%, 70rem);
   
   @include brk.minWidth(small) {
     --side-padding: 4em;
-    --hero-image-width: 80%;
+    --hero-image-width: min(80%, 70rem);
   }
   
   @include brk.minWidth(medium) {
-    --fs-200: 0.625rem;
+    --fs-200: 0.85rem;
     --fs-400: 1.125rem;
-    --fs-500: 1.75rem;
+    --fs-500: 1.5rem;
     --fs-600: 2.5rem;
     --fs-700: 3rem;
     --fs-900: 6.25rem;
+  }
+  
+  @include brk.minWidth(large) {
+    --side-padding: 6.625em;
   }
 }

@@ -5,12 +5,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: var(--side-padding);
+  align-items: center;
+  padding: 1em;
   margin-bottom: 6.5rem;
   
-  @include brk.minWidth(small) {
-    padding: 2em 2em;
+  @include brk.minWidth(medium) {
+    padding: 4em;
+    margin-bottom: 10rem;
   }
+  
+  @include brk.minWidth(large) {
+    --logo-width: 15rem;
+  }
+  
   
   &__logo {
     width: var(--logo-width);
