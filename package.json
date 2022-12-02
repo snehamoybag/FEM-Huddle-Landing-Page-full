@@ -1,6 +1,6 @@
 {
   "name": "huddle-landing-page-with-curved-sections-master",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "![Header/intro section for the Huddle landing page with curved sections](./design/desktop-preview.jpg)",
   "main": "src/js/index.js",
   "scripts": {

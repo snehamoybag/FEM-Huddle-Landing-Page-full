@@ -5,12 +5,17 @@
   --desc-margin-bottom: 2rem;
   --desc-max-width: 45ch;
   --email-input-padding: 1em;
-  --btn-margin: 1rem 0 0 auto;
+  --btn-padding: 0.75em 1.75em;
+  --form-flex-direction: column;
+  --form-gap: 1rem;
+  --btn-align-self: end;
     
   @include brk.minWidth(medium) {
-    --email-input-padding: 0.75em 1em;
-    --btn-margin: 0;
     --title-margin-bottom: 1.5rem;
+    --email-input-padding: 0.75em 1em;
+    --form-flex-direction: row;
+    --form-gap: 2.5rem;
+    --btn-align-self: start;
   }
   
   .title {
@@ -26,30 +31,26 @@
   }
   
   &__form {
+    display: flex;
+    flex-direction: var(--form-flex-direction);
+    gap: var(--form-gap);
     
     @include brk.minWidth(medium) {
-      
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      grid-template-areas: 
-        'input btn'
-        'err err';
-      grid-column-gap: 2rem;
+      flex-direction: row;
     }
   }
   
+  &__label {
+    width: 100%;
+  }
+  
   &__input-email {
-    display: block;
     width: 100%;
     padding: var(--email-input-padding);
     border: none;
     border-radius: 0.25em;
     font-weight: var(--fw-regular);
     color: var(--clr-neutral-900);
-    
-    @include brk.minWidth(medium) {
-      grid-area: input;
-    }
     
     &:focus {
       outline: 2px solid var(--clr-primary-400);
@@ -61,20 +62,12 @@
     color: var(--clr-secondary-400);
     font-style: italic;
     display: none;
-    
-    @include brk.minWidth(medium) {
-      grid-area: err;
-    }
   }
   
-  .btn {
-    display: block;
-    margin: var(--btn-margin);
+  &__button {
+    padding: var(--btn-padding);
     font-weight: var(--fw-bold);
-    
-    @include brk.minWidth(medium) {
-      grid-area: btn;
-    }
+    align-self: var(--btn-align-self);
   }
 }
 

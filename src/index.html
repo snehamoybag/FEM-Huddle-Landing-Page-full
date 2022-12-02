@@ -78,12 +78,13 @@
           To recieve tips on how to grow your community, sign up to our weekly newsletter. We'll never send you spam or pass on your email address
         </p>
         <form class="newsletter__form" id="newsletter-form" action="/" method="GET">
+          <label class="newsletter__label" for="newsletter-email">
             <input class="newsletter__input-email" type="email" id="newsletter-email" name="newsletter-email">
-            <label for="newsletter-email">
-              <span class="newsletter__email-error" id="error-email-msg">Check your email please</span>
-            </label>
-            <button class="btn btn--cut-corners" type="submit">Subscribe</button>
-          </form>
+            
+            <span class="newsletter__email-error" id="error-email-msg">Check your email please</span>
+          </label>
+          <button class="newsletter__button | btn btn--cut-corners" type="submit">Subscribe</button>
+        </form>
       </section>
       <section class="site-info">
         <a href="#">
@@ -104,7 +105,7 @@
       </section>
       <section class="attribution">
         <p class="attribution__info">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.frontendmentor.io/profile/snehamoybag" target="_blank">Snehamoy Bag</a>.
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="http://localhost:5173/">Snehamoy Bag</a>.
         </p>
       </section>
     </footer>
