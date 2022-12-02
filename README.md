@@ -2,7 +2,7 @@
 
 This is a solution to the [Huddle landing page with curved sections challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-sections-5ca5ecd01e82137ec91a50f2). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-![Huddle Landing Page Preview](/design/desktop-preview.jpg)
+![Huddle Landing Page Preview](./design/desktop-preview.jpg)
 
 ## Table of contents
 
@@ -28,15 +28,15 @@ Users should be able to:
 ### Screenshot
 
 - Desktop (1440px)
-![Huddle Landing Page Desktop View](/screenshots/huddle_landing_page_desktop.png)
+![Huddle Landing Page Desktop View](./screenshots/huddle_landing_page_desktop.png)
 
 
 - Tablets
-![Huddle Landing Page Tablet View](/screenshots/huddle_page_tablet.png)
+![Huddle Landing Page Tablet View](./screenshots/huddle_page_tablet.png)
 
 
 - Mobile
-![Huddle Landing Page Mobile View](/screenshots/huddle_page_mobile.png)
+![Huddle Landing Page Mobile View](./screenshots/huddle_page_mobile.png)
 
 
 ### Links
